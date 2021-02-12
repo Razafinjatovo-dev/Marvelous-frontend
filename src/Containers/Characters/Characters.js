@@ -12,7 +12,7 @@ const Characters = (props) => {
     favoriteCharactersPopulated,
     setFavoriteCharactersPopulated,
   } = props;
-
+  const Url = "https://marvelous-backend.herokuapp.com";
   const [characters, setCharacters] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [skip, setSkip] = useState(0);
@@ -28,7 +28,7 @@ const Characters = (props) => {
     const fetchCharacters = async () => {
       // console.log("fetching data");
       const response = await axios.get(
-        `https://git.heroku.com/marvelous-backend.git?skip=${skip}&characterName=${characterName}`
+        `Url?skip=${skip}&characterName=${characterName}`
       );
       // console.log(response.data.results)
       setCharacters(response.data.results);
