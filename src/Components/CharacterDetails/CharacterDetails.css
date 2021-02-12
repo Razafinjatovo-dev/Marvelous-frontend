@@ -1,0 +1,151 @@
+.CharacterDetails_pictureWrapper {
+  /* background-color: #202020; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.CharacterDetails_pictureWrapper > img {
+  width: 70%;
+  height: auto;
+}
+.CharacterName {
+  background-color: #202020;
+  /* background-color: purple; */
+  color: white;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  text-transform: uppercase;
+  box-sizing: border-box;
+}
+
+.ComicsList_Wrapper {
+  /* border: 4px solid blue; */
+  max-width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
+}
+
+.Comic_Card {
+  /* border: red 2px dashed; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 45vw;
+  min-height: 200px;
+  margin-bottom: 10px;
+}
+
+.ComicPicture_Wrapper > img {
+  object-fit: fill;
+  width: 100%;
+  height: 250px;
+}
+
+.ComicTitle {
+  /* background-color:yellow; */
+  width: 100%;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: small;
+  display: flex;
+  justify-content: flex-start;
+}
+.ComicDescription {
+  display: none;
+}
+
+.MainContent_GlobalWrapper h3 {
+  /* background-color: aqua; */
+  padding: 5px;
+  text-align: center;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .MainContent_GlobalWrapper {
+    /* border: 4px solid blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .CharacterDetails_pictureWrapper {
+    /* background-color:aqua; */
+    width: 100%;
+  }
+  .CharacterDetails_pictureWrapper > img {
+    width: 300px;
+    height: auto;
+  }
+  .CharacterName {
+    /* background-color: #202020; */
+    width: 300px;
+  }
+  .ComicsList_Wrapper {
+    /* border: 10px dotted black; */
+    justify-content: space-evenly;
+    width: 1200px;
+  }
+  .Comic_Card {
+    /* border: red 2px dashed; */
+    background-color: #202020;
+    /* background-color: red; */
+    width: 290px;
+    min-height: 200px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* margin-bottom: 10px; */
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .ComicsList_Wrapper {
+    justify-content: space-evenly;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .Comic_Card {
+    /* border: red 2px dashed; */
+    /* background-color: #202020; */
+    /* background-color: red; */
+    width: 290px;
+    min-height: 200px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* margin-bottom: 10px; */
+  }
+
+  .ComicPicture_Wrapper {
+    /* border: 2px solid green; */
+    width: 290px;
+    height: 290px;
+  }
+  .ComicPicture_Wrapper > img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .ComicTitle {
+    /* background-color:yellow; */
+    background-color: #202020;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+    color: White;
+    margin-top: 5px;
+    text-align: center;
+  }
+}

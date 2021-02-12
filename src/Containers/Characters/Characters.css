@@ -1,0 +1,239 @@
+:root {
+  --PageNumbersWrapperWidth: calc(80vw);
+}
+
+.PageNumbers_Wrapper::-webkit-scrollbar {
+  background-color: rgb(32, 32, 32);
+  height: 5px;
+  /* outline: 1px solid slategrey; */
+}
+::-webkit-scrollbar-thumb {
+  background-color: red;
+  outline: 1px solid slategrey;
+}
+
+.PaginationWrapper {
+  /* background-color: green; */
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.PageNumbers_Wrapper {
+  /* background-color: yellow; */
+  width: var(--PageNumbersWrapperWidth);
+  height: 40px;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  overflow-x: scroll;
+}
+
+.PageNumbers_Wrapper input {
+  width: calc(var(--PageNumbersWrapperWidth) / 10);
+  background-color: rgb(32, 32, 32);
+  height: 40px;
+  display: inline-block;
+  flex-shrink: 0;
+  color: white;
+  border: none;
+}
+.PageNumbers_Wrapper input:hover {
+  background-color: red;
+}
+
+.PageNumbers_Wrapper input:focus {
+  outline: 0;
+  background-color: red;
+}
+
+
+
+.Characters_header {
+  /* background-color: aqua; */
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.Characters_PageTitle {
+  margin-bottom: 20px;
+}
+
+.Characters_searchBar {
+  /* border: 2px solid #202020; */
+  background-color: #ffffff;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  width: 90%;
+  border-bottom: 2px solid #202020;
+}
+
+.Characters_searchBar > input {
+  width: 100%;
+  height: 26px;
+  margin-left: 5px;
+  border: none;
+  font-size: 1.2em;
+}
+
+.Characters_searchBar > input:focus {
+  outline: none;
+}
+
+.resultsQtity {
+  /* background-color:red; */
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.CharactersIdWrapper {
+  /* border: Blue 4px solid; */
+  /* background-color: yellow; */
+  max-width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
+}
+
+.CharacterIdCard {
+  /* border: red 2px dashed; */
+  background-color: #202020;
+  display: flex;
+  flex-direction: column;
+  width: 45vw;
+  min-height: 200px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.CharacterPicture {
+  /* background-color: pink; */
+  background-color: black;
+  width: 45vw;
+  height: 45vw;
+  border-bottom: 2px solid red;
+}
+
+.CharacterPicture > img {
+  object-fit: fill;
+  width: 100%;
+  height: 45vw;
+}
+.Character_name {
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.Character_description {
+  display: none;
+}
+
+.LikeButton {
+  /* background-color: aqua; */
+  /* width: 1px; */
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+@media all and (min-width: 992px) {
+  .Characters_header {
+    /* background-color: aqua; */
+    font-size: 2em;
+  }
+  .CharacterIdCard {
+    /* border: red 2px dashed; */
+    background-color: #202020;
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    min-height: 200px;
+    position: relative;
+    margin-bottom: 10px;
+  }
+
+  .CharacterPicture {
+    width: 30vw;
+    height: 30vw;
+  }
+
+  .CharacterPicture > img {
+    object-fit: fill;
+    width: 100%;
+    height: 30vw;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .Characters_header {
+    /* background-color: aqua; */
+    font-size: 1em;
+  }
+  .Comics_PageTitle {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+  }
+
+  .Characters_PageTitle {
+    font-size: 1.5em;
+  }
+  .Characters_searchBar {
+    /* border: 2px solid #202020; */
+    width: 30%;
+  }
+  .MainContentWrapper {
+    /* background-color: slateblue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .LargeScreen_WidthLimiter {
+    /* border: 4px dotted red; */
+    width: 1200px;
+  }
+
+  .CharacterIdCard {
+    /* border: red 2px dashed; */
+    background-color: #202020;
+    display: flex;
+    flex-direction: column;
+    width: 15vw;
+    min-height: 200px;
+    position: relative;
+    margin-bottom: 10px;
+  }
+
+  .CharacterPicture {
+    /* border-bottom: 2px solid red; */
+    width: 15vw;
+    height: 15vw;
+  }
+
+  .CharacterPicture > img {
+    object-fit: fill;
+    width: 100%;
+    height: 15vw;
+  }
+  .CharacterIdCard {
+    margin-bottom: 20px;
+  }
+  .CharacterIdCard:hover {
+    box-shadow: 2px 2px red;
+    position: relative;
+    top: -3px;
+  }
+}

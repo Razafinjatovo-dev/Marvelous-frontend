@@ -1,0 +1,151 @@
+ /* BELOW CSS PAGINATION SPECIFIC TO COMICS
+OTHER COMIC'S PAGINATION CSS ARE DEFINED IN CHARACTERS.CSS */
+.PageNumbers_Wrapper input {
+  width: calc(var(--PageNumbersWrapperWidth) / 10);
+}
+
+
+.Comics_header {
+  /* background-color: aqua; */
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.Comics_searchBar {
+  /* border: 2px solid #202020; */
+  background-color: orange;
+  background-color: #ffffff;
+  border-bottom: 2px solid #202020;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  width: 90%;
+}
+
+.Comics_searchBar > input {
+  width: 100%;
+  height: 26px;
+  margin-left: 5px;
+  border: none;
+  font-size: 1.2em;
+}
+
+.Comics_searchBar > input:focus {
+  outline: none;
+}
+
+.resultsQtity {
+  /* background-color:red; */
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.ComicsIdWrapper {
+  /* background-color: yellow; */
+  /* border: Blue 4px solid; */
+  max-width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
+}
+
+.ComicIdCard {
+  /* background-color: aqua; */
+  /* border: red 2px dashed; */
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  width: 45vw;
+  /* height: 400px; */
+  position: relative;
+  margin-bottom: 10px;
+}
+.Comic_Image {
+  /* background-color: pink; */
+  background-color: black;
+  width: 45vw;
+  height: 45vw;
+  border-bottom: 2px solid red;
+}
+
+.Comic_Image > img {
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
+}
+
+.Comic_Title {
+  background-color: black;
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.Comic_Description {
+  display: none;
+}
+
+.LikeButton {
+  /* background-color: aqua; */
+  /* width: 1px; */
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .Comics_header {
+    font-size: 2em;
+  }
+
+  .ComicIdCard {
+    width: 30vw;
+  }
+  .Comic_Image {
+    width: 30vw;
+    height: 30vw;
+  }
+
+  /* BELOW CSS PAGINATION SPECIFIC TO COMICS
+OTHER COMIC'S PAGINATION CSS ARE DEFINED IN CHARACTERS.CSS */
+  #PageNumbers_Wrapper input {
+    width: calc(var(--PageNumbersWrapperWidth) / 20);
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .Comics_header {
+    font-size: 1em;
+  }
+  .Comics_searchBar {
+    /* border: 2px solid #202020; */
+    width: 30%;
+  }
+  .ComicIdCard {
+    width: 15vw;
+  }
+  .Comic_Image {
+    width: 15vw;
+    height: 15vw;
+  }
+  .ComicIdCard {
+    margin-bottom: 20px;
+  }
+  .ComicIdCard:hover {
+    box-shadow: 2px 2px red;
+    position: relative;
+    top: -3px;
+  }
+}

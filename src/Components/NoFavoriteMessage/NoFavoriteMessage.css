@@ -1,0 +1,42 @@
+
+.NoFavWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: pink; */
+}
+.NoFavMessage{
+    background-color: #202020;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:60vw;
+    height:60vw;
+    text-align: center;
+    margin-top: 30px;
+    line-height: 2.5;
+    color: white;
+    box-shadow: 12px 12px 2px 1px rgba(32, 32, 32, .1);
+}
+
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width:1024px) {
+    .NoFavMessage{
+        width:50vw;
+        height:50vw;
+        margin-top: 50px;
+        font-size: 1.3em;
+
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .NoFavMessage{
+        width:50vw;
+        height:20vw;
+    }
+}

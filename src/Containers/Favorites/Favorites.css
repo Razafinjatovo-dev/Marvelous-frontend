@@ -1,0 +1,37 @@
+.FavWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.redirectFavorite {
+  box-sizing: border-box;
+  background-color: red;
+  width: 50vw;
+  height: 20vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  border-right: black 1px solid;
+}
+
+.redirectFavorite:hover {
+  background-color: rgb(32,32,32);
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .NoFavMessage {
+    font-size: 1.3em;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .redirectFavorite {
+    width: 600px;
+    height: 40px;
+  }
+}
