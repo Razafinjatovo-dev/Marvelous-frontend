@@ -5,6 +5,7 @@ import "./CharacterDetails.css";
 
 const CharacterDetails = (props) => {
   const { characterId } = useParams();
+  const Url = "https://marvelous-backend.herokuapp.com";
   const [comicsList, setcomicsList] = useState();
   const [characterName, setCharacterName] = useState();
   const [characterPictureUrl, setCharacterPictureUrl] = useState();
@@ -15,7 +16,7 @@ const CharacterDetails = (props) => {
   useEffect(() => {
     const fetchComicsList = async () => {
       const response = await axios.get(
-        `http://localhost:3100/comics/${characterId}`
+        `${Url}/comics/${characterId}`
       );
       //   console.log(response.data.comics);
       setCharacterName(response.data.name);
