@@ -28,7 +28,7 @@ const Characters = (props) => {
     const fetchCharacters = async () => {
       // console.log("fetching data");
       const response = await axios.get(
-        `http://localhost:3100?skip=${skip}&characterName=${characterName}`
+        `https://git.heroku.com/marvelous-backend.git?skip=${skip}&characterName=${characterName}`
       );
       // console.log(response.data.results)
       setCharacters(response.data.results);
