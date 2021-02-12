@@ -28,7 +28,7 @@ const Characters = (props) => {
     const fetchCharacters = async () => {
       // console.log("fetching data");
       const response = await axios.get(
-        `Url?skip=${skip}&characterName=${characterName}`
+        `${Url}?skip=${skip}&characterName=${characterName}`
       );
       // console.log(response.data.results)
       setCharacters(response.data.results);
