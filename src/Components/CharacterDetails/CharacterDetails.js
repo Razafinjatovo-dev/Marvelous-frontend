@@ -4,8 +4,7 @@ import { useParams } from "react-router-dom";
 import "./CharacterDetails.css";
 
 const CharacterDetails = (props) => {
-  const { characterId } = useParams();
-  const Url = "https://marvelous-backend.herokuapp.com";
+  const { characterId, Url} = useParams();
   const [comicsList, setcomicsList] = useState();
   const [characterName, setCharacterName] = useState();
   const [characterPictureUrl, setCharacterPictureUrl] = useState();

@@ -5,12 +5,12 @@ import "./Comics.css";
 
 const Comics = (props) => {
   const {
+    Url,
     favoriteComicsIdList,
     setFavoriteComicsIdList,
     favoriteComicsPopulated,
     setFavoriteComicsPopulated,
   } = props;
-  const Url = "https://marvelous-backend.herokuapp.com";
   const [comicsData, setComicsData] = useState();
   const [skip, setSkip] = useState(0);
   const [isLoading, setIsLoading] = useState(true);

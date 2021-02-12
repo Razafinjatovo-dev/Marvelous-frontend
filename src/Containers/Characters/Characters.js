@@ -7,12 +7,12 @@ import "./Characters.css";
 
 const Characters = (props) => {
   const {
+    Url,
     favoriteCharactersList,
     setFavoriteCharactersList,
     favoriteCharactersPopulated,
     setFavoriteCharactersPopulated,
   } = props;
-  const Url = "https://marvelous-backend.herokuapp.com";
   const [characters, setCharacters] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [skip, setSkip] = useState(0);

@@ -15,6 +15,7 @@ library.add(faHeart, faSearch);
 
 function App() {
   //Characters Favorites
+  const Url = "https://marvelous-backend.herokuapp.com";
   const [
     favoriteCharactersPopulated,
     setFavoriteCharactersPopulated,
@@ -30,6 +31,7 @@ function App() {
       <Switch>
         <Route path="/Comics">
           <Comics
+            Url={Url}
             favoriteComicsIdList={favoriteComicsIdList}
             setFavoriteComicsIdList={setFavoriteComicsIdList}
             favoriteComicsPopulated={favoriteComicsPopulated}
@@ -51,13 +53,14 @@ function App() {
           />
         </Route>
         <Route exact path="/CharacterDetails/:characterId">
-          <CharacterDetails />
+          <CharacterDetails Url={Url} />
         </Route>
         <Route exact path="/Favorites">
           <Favorites />
         </Route>
         <Route exact path="/">
           <Characters
+            Url={Url}
             favoriteCharactersList={favoriteCharactersList}
             setFavoriteCharactersList={setFavoriteCharactersList}
             favoriteCharactersPopulated={favoriteCharactersPopulated}
