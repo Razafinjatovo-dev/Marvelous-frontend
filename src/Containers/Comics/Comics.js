@@ -44,7 +44,7 @@ const Comics = (props) => {
   useEffect(() => {
     const fetchComics = async () => {
       const response = await axios.get(
-        `http://localhost:3100/comics?skip=${skip}&title=${comicTitle}`
+        `${Url}/comics?skip=${skip}&title=${comicTitle}`
       );
       console.log(response.data.results);
       setComicsData(response.data.results);
