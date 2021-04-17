@@ -1,5 +1,4 @@
 .Logo {
-  /* background-color:pink; */
   background-color: #202020;
   display: flex;
   justify-content: center;
@@ -15,12 +14,10 @@
   background-image: url("../../Assets/marvel_largeScreen.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: yellow;
   height: 150px;
 }
 
 nav {
-  /* background-color: green; */
   background-color: #202020;
   height: 30px;
   display: flex;
@@ -30,7 +27,6 @@ nav {
 }
 
 nav p {
-  /* border: solid 0.5px lightgray; */
   height: 30px;
   display: flex;
   align-items: center;
@@ -57,7 +53,7 @@ nav p:hover {
     height: 80px;
   }
 
-  nav p{
+  nav p {
     height: 80px;
   }
 }
@@ -74,7 +70,7 @@ nav p:hover {
   }
 
   .NavWrapper {
-    background-color: rgb(32,32,32);
+    background-color: rgb(32, 32, 32);
     display: flex;
     justify-content: center;
   }
@@ -85,9 +81,9 @@ nav p:hover {
     height: 40px;
   }
 
-  nav p{
-      /* border: 1px solid red; */
-      width:calc(1200px/3);
-      height: 40px;
+  nav p {
+    /* border: 1px solid red; */
+    width: calc(1200px / 3);
+    height: 40px;
   }
 }

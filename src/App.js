@@ -11,6 +11,7 @@ import FavoriteComics from "./Components/FavoriteComics/FavoriteComics";
 import Favorites from "./Containers/Favorites/Favorites";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faHeart, faSearch } from "@fortawesome/free-solid-svg-icons";
+import LoaderSpinner from "./Components/Loader/LoaderSpinner";
 library.add(faHeart, faSearch);
 
 function App() {
@@ -67,15 +68,12 @@ function App() {
             setFavoriteCharactersPopulated={setFavoriteCharactersPopulated}
           />
         </Route>
+        <Route path="/Loader">
+          <LoaderSpinner/>
+        </Route>
       </Switch>
     </Router>
 
-    // <div className="App">
-    //   HELLO REACT APP
-    //   <Characters />
-    //   <hr></hr>
-    //   <Comics/>
-    // </div>
   );
 }
 

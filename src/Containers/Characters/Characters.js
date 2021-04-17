@@ -2,8 +2,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import LoaderSpinner from "../../Components/Loader/LoaderSpinner";
 import "./Characters.css";
-// import FavoriteCharacters from "./FavoriteCharacters";
 
 const Characters = (props) => {
   const {
@@ -21,32 +21,22 @@ const Characters = (props) => {
 
   const limit = 100;
 
-  //Fetch characters data
-  // console.log(favoriteCharactersList);
-
   useEffect(() => {
     const fetchCharacters = async () => {
-      // console.log("fetching data");
       const response = await axios.get(
         `${Url}?skip=${skip}&characterName=${characterName}`
       );
-      // console.log(response.data.results)
       setCharacters(response.data.results);
       setResultsQtity(response.data.count);
       setIsLoading(false);
-      // console.log(response.data);
     };
     fetchCharacters();
   }, [skip, characterName, favoriteCharactersList]);
 
-  //Pages Onclick
   const handlePage = (event) => {
-    // console.log(Number(event.target.value));
-    //SKIP VALUE CALCULATION
     const targetedPage = Number(event.target.value);
     const skipValue = (targetedPage - 1) * limit;
     setSkip(skipValue);
-    // console.log("character skip value :"+ skip);
   };
 
   //SearchBar management
@@ -54,10 +44,8 @@ const Characters = (props) => {
     setSkip(0);
     setCharacterName(event.target.value);
   };
-  console.log(favoriteCharactersList);
-  console.log(favoriteCharactersPopulated);
-  return isLoading === true ? (
-    <div>Loading page...</div>
+  return isLoading ? (
+    <LoaderSpinner />
   ) : (
     <div className="MainContentWrapper">
       <div className="LargeScreen_WidthLimiter">
@@ -80,11 +68,7 @@ const Characters = (props) => {
         <div className="CharactersIdWrapper">
           {characters.map((character) => {
             return (
-              <div
-                className="CharacterIdCard"
-                key={character._id}
-                // style={{ backgroundColor: "LightGrey" }}
-              >
+              <div className="CharacterIdCard" key={character._id}>
                 <Link
                   to={`/CharacterDetails/${character._id}`}
                   style={{ textDecoration: "none" }}
@@ -111,7 +95,7 @@ const Characters = (props) => {
                   </div>
                 </Link>
 
-                {/* HEART CLICK DEBUT  */}
+                {/* FAVORITE ICON CLICK START  */}
                 <p
                   className="LikeButton"
                   onClick={() => {
@@ -154,7 +138,7 @@ const Characters = (props) => {
                   )}
                 </p>
 
-                {/* HEART CLICK FIN  */}
+                {/* FAVORITE ICON CLICK   */}
               </div>
             );
           })}

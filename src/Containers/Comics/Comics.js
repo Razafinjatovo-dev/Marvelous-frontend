@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import React, { useState,useEffect } from "react";
+import LoaderSpinner from "../../Components/Loader/LoaderSpinner";
 import "./Comics.css";
 
 const Comics = (props) => {
@@ -61,8 +62,8 @@ const Comics = (props) => {
     setComicTitle(event.target.value);
   };
 
-  return isLoading === true ? (
-    <p>Loading Page...</p>
+  return isLoading? (
+    <LoaderSpinner/>
   ) : (
     <div className="MainContentWrapper">
       <div className="LargeScreen_WidthLimiter">
