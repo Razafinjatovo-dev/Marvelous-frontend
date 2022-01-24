@@ -20,7 +20,6 @@ const CharacterDetails = (props) => {
                 `https://lereacteur-marvel-api.herokuapp.com/comics/${characterId}?apiKey=40D67RDGCM1a6Bfj`
             );
             //   console.log(response.data.comics);
-            console.log(response);
             setCharacterName(response.data.name);
             setCharacterPictureUrl(
                 response.data?.thumbnail.path + "." + response.data.thumbnail.extension
